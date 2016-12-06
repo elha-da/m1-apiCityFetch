@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<annuaire >
+	<personn id="001" propriete="etudiant">
+  	<name>daoudi</nom>
+	  <prenom>El</prenom>
+	  <age>31</age>
+  	<telephone>065162079</telephone>
+	  <email>el-hassan.daoudi@etu.univ-montp3.fr</email>
+	  <collegue nom="yahya" prenom="ahmed">003</collegue>
+  </personne>
+  
+  <personne id="002" propriete="etudiant">
+  	<nom>jbair</nom>
+	  <prenom>dounia</prenom>
+	  <age>23</age>
+  	<telephone>0600000002</telephone>
+	  <email>dounia.jbai@etu.univ-montp3.fr</email>
+  </personne>
+  
+  <personne id="003" propriete="etudiant">
+  	<nom>yahya</nom>
+	  <prenom>ahmed</prenom>
+	  <age>34</age>
+  	<telephone>0600000003</telephone>
+	  <email>ahmed.yahya@etu.univ-montp3.fr</email>
+  </personne>
+</annuaire>

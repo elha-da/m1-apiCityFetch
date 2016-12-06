@@ -1,0 +1,36 @@
+{"annuaire": {
+	"personne": [
+		{ 
+			"id": "001",
+			"propriete": "etudiant",
+			"nom": "daoudi",
+			"prenom": "El",
+			"age": 31,
+		 	"telephone": "065162079",
+			"email": "el-hassan.daoudi@etu.univ-montp3.fr",
+			"collegue": [
+				"003",
+				"002"
+			]
+		},
+		{
+			"id": "002",
+			"propriete": "etudiant",
+			"nom": "jbair",
+			"prenom": "dounia",
+			"age": 23,
+			"telephone": "0600000002",
+			"email": "dounia.jbai@etu.univ-montp3.fr",
+		},
+		{
+			"id": "003",
+			"propriete": "etudiant",
+			"nom": "yahya",
+			"prenom": "ahmed",
+			"age": 34,
+			"telephone": "0600000003",
+			"email": "ahmed.yahya@etu.univ-montp3.fr"
+		}
+	]
+	}
+}
