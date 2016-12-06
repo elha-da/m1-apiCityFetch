@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	
+	var profil = {
+		"id": "1",
+		"nom": "JBAIR",
+		"prenom": "Dounia",
+		"age" :"23 ans",
+		"email":"dounia.jbair@gmail.com",
+		"fonction":"Etudiante",
+		"friends": [
+			{
+				"id":"2",
+				"nom": "JBAIR",
+				"prenom": "Dounia",
+				"age" :"23 ans",
+				"email":"dounia.jbair@gmail.com",
+				"fonction":"Etudiante",
+			},
+			{
+					"id":"3",
+					"nom": "JBAIR",
+					"prenom": "Dounia",
+					"age" :"23 ans",
+					"email":"jbairdounia@gmail.com",
+					"fonction":"Etudiante",
+			}
+		]
+	}
+
+	
+</script>
+</body>
+</html>

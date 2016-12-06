@@ -1,0 +1,26 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+		 
+		 <foaf:annuaire>
+  <foaf:personne id="1" >
+			<foaf:nom>JBAIR</foaf:nom>
+			<foaf:prenom>Dounia</foaf:prenom>
+			<foaf:age>23 ans</foaf:age>
+			<foaf:email>dounia.jbair@gmail.com</foaf:email>
+			<foaf:fonction>Etudiante</foaf:fonction></foaf:personne>
+<foaf:personne id="2" >
+		  <foaf:nom>Sanaa</foaf:nom>
+		  <foaf:prenom>Sana</foaf:prenom>
+		  <foaf:age>23 ans</foaf:age>
+		  <foaf:email>sanaa.sana@gmail.com</foaf:email>
+		<foaf:fonction>Etudiante</foaf:fonction> </foaf:personne>
+ <foaf:personne id="3" >
+		  <foaf:nom>JBAIR</foaf:nom>
+		  <foaf:prenom>dounia</foaf:prenom>
+		  <foaf:age>32 ans</foaf:age>
+		  <foaf:email>jbairdounia@gmail.com</foaf:email>
+		  <foaf:fonction>Etudiante</foaf:fonction> 
+</foaf:personne>
+  
+</foaf:annuaire>
+</rdf:RDF>
