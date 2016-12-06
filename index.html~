@@ -11,14 +11,14 @@ function CreeTableau() {
 	}
 	
 var LibelleOption = new CreeTableau("Votre Besoin C'est?",
-		//																"Besoin de sortir le soir",
-		//																"Besoin de se Bien loger",
+																		"Besoin de sortir le soir",
+																		"Besoin de se Bien loger",
 																		"Besoin de Bien Manger",
 																		"Savoir la météo"
 												);
 var CibleURL = new CreeTableau("",
-			//												"meteo.html",
-			//												"loger.html",
+															"meteo.html",
+															"loger.html",
 															"manger.html",
 															"bar.html"
 									);

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="stylesheet" type="text/css" href="fichier.css">
+	<meta charset="UTF-8">
+	<title>Les restaurants</title>
+	<script src="http://apijsv2.viamichelin.com/apijsv2/api/js?key=JSBS20070201173627379646361061$165321&lang=fra" type="text/javascript"></script>
+</head>
+<body>
+<div id="bandeau"><!--Ceci est le bandeau --><img src="background.jpg" alt="couverture" class="cover" width="900" height="50" >
+<ul id="menu-demo2">
+
+	<li><a href="index.html"> Accueil </a>
+		<ul>
+			<li><a href="#">lien sous menu 1</a></li>
+			<li><a href="#">lien sous menu 1</a></li>
+		</ul>
+	</li>
+	<li><a href="manger.html">Restaurants/Bar</a>
+		<ul>
+			<li><a href="#">Lien sous menu 2</a></li>
+			<li><a href="#">Lien sous menu 2</a></li>
+			<li><a href="#">Lien sous menu 2</a></li>
+			<li><a href="#">Lien sous menu 2</a></li>
+		</ul>
+	</li>
+	<li><a href="principe.html">Principe</a>
+		<ul>
+			<li><a href="#">lien sous menu 3</a></li>
+			<li><a href="#">lien sous menu 3</a></li>
+			<li><a href="#">lien sous menu 3</a></li>
+			<li><a href="#">lien sous menu 3</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Contact</a>
+		<ul>
+			<li><a href="#">Lien sous menu 4</a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+		</ul>
+	</li>
+</ul>
+<div>Saisissez votre Ville</div>
+<div>
+	<input type="text" id="address" value="" />
+	<button id="send">OK</button>
+</div>
+<div id="result"></div>
+<div id="output"></div>
+
+<script type="text/javascript">
+
+	var long, lati;
+	var send = $_id("send"),
+						address = $_id("address"),
+						output = $_id("output");
+	send.onclick = function () {
+		output.innerHTML = "";
+		var conf = {
+			singleFieldSearch : address.value
+		};
+		var displayError = function () {
+			output.innerHTML = "<div>Une erreur s'est produite.</div>";
+		};
+		var callbacks = {
+			onSuccess : function (results) {
+				var coords = results[0].coords;
+				long = coords.lon;
+				lati = coords.lat;
+
+				fLoadHotel(long, lati);
+			},
+			onError : displayError,
+			onInitError : displayError
+			
+		};
+		VMLaunch("ViaMichelin.Api.Geocoding", conf, callbacks);
+		
+	}
+	
+	function fLoadHotel(long, lati){
+		var restau = "http://apir.viamichelin.com/apir/2/findPoi.xml/RESTAURANT/fra?center="+long+":"+lati+"&nb=10&dist=1000&source=RESGR&filter=AGG.provider%20eq%20RESGR&charset=UTF-8&ie=UTF-8&authKey=RESTGP20161205125103010859418188";
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+						myFunction(this);
+				}
+		};
+		xhttp.open("GET", restau, true);
+		xhttp.send();
+	}
+
+	function myFunction(xml) {
+
+			var xmlDoc = xml.responseXML;
+			var elements = xmlDoc.documentElement.getElementsByTagName("name");
+
+			var html = "";
+			for (var i=0; i<elements.length; i++) {
+					if (typeof xmlDoc.getElementsByTagName("name")[i] != "undefined") {
+						html += "<ul id='restaurant'><li restaurant: >"+xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue+"</li>";
+					}
+					if (typeof xmlDoc.getElementsByTagName("meal_price")[i] != "undefined") {
+						html += "<li prix: >"+xmlDoc.getElementsByTagName("meal_price")[i].childNodes[0].nodeValue+"</li>";
+					}
+					if (typeof xmlDoc.getElementsByTagName("address")[i] != "undefined") {
+						html += "<li> adresse: "+xmlDoc.getElementsByTagName("address")[i].childNodes[0].nodeValue+"</li>";
+					}
+					if (typeof xmlDoc.getElementsByTagName("local_phone")[i] != "undefined") {
+						html += "<li> numero tél: "+xmlDoc.getElementsByTagName("local_phone")[i].childNodes[0].nodeValue+"</li>";
+					}
+					if (typeof xmlDoc.getElementsByTagName("web")[i] != "undefined") {
+						html += "<li> site web: "+xmlDoc.getElementsByTagName("web")[i].childNodes[0].nodeValue+"</li>";
+					}
+					html += "</ul>";
+			}
+			document.getElementById("result").innerHTML = html;
+	}
+
+		
+</script>
+<!--
+<div id="piedpage">
+	Easytravel 2016/2017
+	<img src="background.jpg" alt="couverture" class="cover" width="900" height="50" >
+</div>
+-->
+</body>
+</html>
