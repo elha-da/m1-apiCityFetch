@@ -1,0 +1,35 @@
+{"collegues": [
+		{ 
+			"id": "012",
+			"propriete": "etudiant",
+			"nom": "yahaya",
+			"prenom": "ahamed",
+			"age": 34,
+		 	"telephone": "0642255056",
+			"email": "ahamed.yahaya@etu.univ-montp3.fr",
+			"collegue": [
+				"013",
+				"014"
+			]
+		},
+		{
+			"id": "013",
+			"propriete": "etudiant",
+			"nom": "jbair",
+			"prenom": "dounia",
+			"age": 23,
+			"telephone": "0600000002",
+			"email": "dounia.jbair@etu@etu.univ-montp3.fr",
+		},
+		{
+			"id": "014",
+			"propriete": "etudiant",
+			"nom": "daoudi",
+			"prenom": "el-hassan",
+			"age": 31,
+			"telephone": "0651620079",
+			"email": "daoudi.ehassan@etu.univ-montp3.fr"
+		}
+	]
+}
+

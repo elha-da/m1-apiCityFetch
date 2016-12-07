@@ -1,0 +1,28 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+
+<foaf:Person rdf:about="#ahamed">
+  <foaf:lastName>yahaya</foaf:lastName>
+  <foaf:firstName>ahamed</foaf:firstName>
+  <foaf:age>34 ans</foaf:age>
+	<foaf:knows>
+		<foaf:Person rdf:about="#dounia">
+		  <foaf:lastName>Jbair</foaf:lastName>
+		  <foaf:firstName>dounia</foaf:firstName>
+		  <foaf:age>22 ans</foaf:age>
+		  <foaf:homepage rdf:resource="http://etu.univ-montp3.fr/jbairdounia" />
+		  <foaf:openid rdf:resource="http://etu.univ-montp3.fr/jbairdounia" />
+		</foaf:Person>
+
+		<foaf:Person rdf:about="#daoudi">
+		  <foaf:lastName>daoudi</foaf:lastName>
+		  <foaf:firstName>el hassane</foaf:firstName>
+		  <foaf:age>31 ans</foaf:age>
+		  <foaf:homepage rdf:resource="http://etu.univ-montp3.fr/daoudielhassan" />
+		  <foaf:openid rdf:resource="http://etu.univ-montp3.fr/daoudielhassan"/>
+		  <foaf:img rdf:resource="http://etu.univ-montp3.fr/daoudielhassan/image.png/>
+		</foaf:Person>
+	</foaf:knows>
+</foaf:Person>
+
+</rdf:RDF>
